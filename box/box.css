@@ -1,15 +1,38 @@
+/* write everything for mobile devices first, including stuff that */
+
+@import 'https://fonts.googleapis.com/css?family=Lato';
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 .main-header {
     width: 100%;
-    height: 75px;
+    height: 65px;
     background: #ccc;
     padding: 25px;
     opacity: 1;
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+    /*margin: auto auto 5vh auto;*/
 }
 
 .list {
-    display: flex;
+    /*display: inline-block;*/
+    /*flex-direction: row-reverse;;*/
+    /*justify-content: space-between;
+    align-items: space-between;*/
+}
+
+ul li {
+  display: inline-block;
+}
+
+/* anything after the @media will apply to the media you check for */
+@media(min-width: 750px) {
+  ul li {
+    display: inline-block;
+  }
 }
 
 .box {
@@ -50,6 +73,52 @@
 .bottom {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    background: lightblue;
 }
 
 
+
+.sq-container {
+  background: gray;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: auto auto 5vh auto;
+}
+
+.sq {
+  background: red;
+  color: white;
+  text-align: center;
+  padding-top: 7px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: inline-block;
+  margin: 8px;
+  /*display: none;*/
+  /*opacity: .5;*/
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+  /*display: none;*/
+}
+
+li {
+  padding-left: 10px;
+}
